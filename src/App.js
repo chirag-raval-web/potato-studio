@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import { 
+  Home, Services, Work, Blog, Career, About ,Header , Route ,useLocation ,Router , Routes,
+  QuoteSection, Footer
+} from './components/import';
+import './components/style/common.css';
+
+function SetTitle() {
+  const location = useLocation();
+  const baseTitle = "potato-studio.vercel.app";
+
+  useEffect(() => {
+    document.title = location.pathname === '/' || location.pathname === '/home'
+      ? baseTitle
+      : `${baseTitle} ${location.pathname}`;
+  }, [location]);
+
+  return null;
+}
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <SetTitle />
+       
+      <QuoteSection />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/work" element={<Work />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/career" element={<Career />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+      <Footer/>
+    </Router>
   );
 }
 
