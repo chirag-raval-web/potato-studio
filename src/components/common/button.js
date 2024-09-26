@@ -13,16 +13,19 @@ const Contact = () => {
     </>
   );
 };
-export default Contact;
+
 export const GetInTouchWhite = ({ btnTxt = "Get in touch", className = "" }) => {
   return (
     <>
       <a
         href="#"
-         className={`btn get-in-touch-btn bg-white  text-black border-white rounded-pill  py-3 ps-2 ${className}`}
+         className={`btn get-in-touch-btn bg-white    text-black border-white rounded-pill  ${className}`}
       >
+       <span>
        {btnTxt}
+        </span>
         <img
+        className="ms-2 rightArrow"
           src="../media/smalll-icons/rigthArrow.webp"
           width="24"
           height="24"
@@ -48,3 +51,4 @@ export const GetInTouchPurple = ({ btnTxt = "Get in touch" }) => {
 };
 
  
+export default Contact;

@@ -1,5 +1,7 @@
 import React from 'react';
-import { Faq, QuoteSection, } from '../import';
+import { Faq } from '../import';
+import "../style/services.css"
+import ServiceItems,{EngagementModel,Approach} from './ServiceItems';
  
  
 
@@ -7,8 +9,9 @@ function Services() {
   return (
     <>
     <main>
-  
-
+    <ServiceItems />
+    <EngagementModel />
+    <Approach />
       <Faq />
     </main>
     </>

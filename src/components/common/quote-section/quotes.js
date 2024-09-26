@@ -14,10 +14,11 @@ export const QuoteItem = ({ quoteData }) => {
   }, []);
 
   return (
-    <TransitionGroup>
+    <>
+      {/* <TransitionGroup> */}
       {quoteData.map((elm) => (
-        <CSSTransition key={elm.id} in={inProp} timeout={500} classNames="fade">
-          <div className="quotes container-fluid">
+        // <CSSTransition key={elm.id} in={inProp} timeout={500} classNames="fade">
+          <div className="quotes container-fluid" key={elm.id}>
             <div className="container d-flex">
               <div className="row justify-content-center">
                 <div className="section-1">
@@ -48,7 +49,7 @@ export const QuoteItem = ({ quoteData }) => {
                     <GetInTouchPurple btnTxt={location.pathname === "/career" ? "Explore Jobs" : "Get in Touch"} />
                     {location.pathname === "/" && ( 
                       <>
-                        <GetInTouchWhite />
+                        <GetInTouchWhite className="" />
                       </>
                     )}
                   </div>
@@ -56,9 +57,10 @@ export const QuoteItem = ({ quoteData }) => {
               </div>
             </div>
           </div>
-        </CSSTransition>
+        // </CSSTransition>
       ))}
-    </TransitionGroup>
+    {/* // </TransitionGroup> */}
+    </>
   );
 };
 

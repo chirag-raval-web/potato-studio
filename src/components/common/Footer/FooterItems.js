@@ -35,7 +35,7 @@ export const FooterLogo = () => {
 
   const CopyRight = () => {
   return (
-    <p class="copyright text-white">
+    <p className="copyright text-white">
       ©The Potato Studio 2024. All rights reserved.
     </p>
   );
@@ -62,7 +62,7 @@ export const OfficeAddress = ({ Address }) => {
   const PrivacyPolicy = ({ PrivacyPage }) => {
   return (
     <>
-      <a href={PrivacyPage} class="text-decoration-none text-white-50 ">
+      <a href={PrivacyPage} className="text-decoration-none text-white-50 ">
         Our Privacy Policy{" "}
         <img src="media\smalll-icons\right-arrow.svg" alt="right-arrow" />
       </a>
