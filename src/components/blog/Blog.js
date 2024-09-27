@@ -1,12 +1,11 @@
 import React from 'react'
-import { Faq } from '../import'
- 
-
+import BlogItems from './blogItems'
+import "../style/blog.css"
 const Blog = () => {
   return (
     <>
     <main>
-      <Faq />
+      <BlogItems />
     </main>
     </>
   )

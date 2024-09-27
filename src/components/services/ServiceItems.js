@@ -2,9 +2,12 @@ import React from "react";
 import SectionText from "../common/sectionText";
 import { GetInTouchWhite } from "../common/button";
 import { servicesData,ApproachData,industryData } from "./serviceApi";
- 
+import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const ServiceItems = () => (
+const ServiceItems = () => {
+  const location = useLocation();
+  return(
   <div className="container">
     <div className="container-fluid service-section">
       <SectionText title="Our Services" />
@@ -12,29 +15,31 @@ const ServiceItems = () => (
         <div className="container">
           <div className="row justify-content-center">
             {servicesData.map((service, index) => (
-              <div className="col-lg-3 col-md-4 col-sm-6 text-center mb-4"  key={index}>
-              <div className="serviceItem">
+              <Link to={`/services${service.to}`} className="col-lg-3 col-md-4 col-sm-6 text-center mb-4  text-black text-decoration-none"  key={index}>
+              <div className="serviceItem ">
                 <img src={service.src} alt={service.alt} className="img-fluid" />
-                <a
-                  href="#"
-                  target="_blank"
+                <Link
                   rel="noopener noreferrer"
-                  className="text-black text-decoration-none d-block mt-2"
+                  className="text-black text-decoration-none d-block mt-2 "
                 >
                   {service.title}  
-                </a>
+                </Link>
               </div>
-            </div>
+            </Link>
             ))}
             <div className="d-flex justify-content-center  ">
-              <GetInTouchWhite />
+ 
+            {location.pathname === "/" && <GetInTouchWhite src="/services" />}
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-);
+  )
+}
+
+
 export default ServiceItems;
 
 const logos = [

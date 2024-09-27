@@ -15,7 +15,7 @@ const Footer = () => {
         {/* <!-- -------top section----------- --> */}
         <div className="d-md-flex footer-section-1 text-center flex-md-row text-white  justify-content-between">
           <h1 className="me-md-4 footer-heading">Let's talk!</h1>
-          <GetInTouchWhite className="footer-btn" />
+          <GetInTouchWhite className="footer-btn" src="/contact-us" />
         </div>
         <div className="hr mt-4 mt-md-0"></div>
 

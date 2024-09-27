@@ -1,38 +1,45 @@
 export  const servicesData = [
     {
       src: "../media/services/ui-ux.svg",
+      to:"/ui-ux-services",
       alt: "UX/UI Design",
       title: "UX/UI Design",
     },
     {
       src: "../media/services/mobile.svg",
+      to:"/mobile-app-design",
       alt: "Mobile App Design",
       title: "Mobile App Design",
     },
     {
       src: "../media/services/website.svg",
+      to:"/website-design",
       alt: "Website Design",
       title: "Website Design",
     },
     {
       src: "../media/services/dashboard.svg",
+      to:"/dashboard-design",
       alt: "Dashboard Design (SaaS)",
       title: "Dashboard Design",
       extra: "(SaaS)",
     },
     {
       src: "../media/services/uxResearch.svg",
+      to:"/ux-research",
       alt: "UX Research",
       title: "UX Research",
     },
-    { src: "../media/services/branding.svg", alt: "Branding", title: "Branding" },
+    { src: "../media/services/branding.svg", alt: "Branding", title: "Branding" ,to:"/branding", },
     {
       src: "../media/services/audit.svg",
+      to:"/design-audit",
       alt: "Design Audit",
       title: "Design Audit",
     },
     {
       src: "../media/services/prototype.svg",
+      to:"/prototyping-interactions",
       alt: "Prototyping & Interactions",
       title: "Prototyping & Interactions",
     },

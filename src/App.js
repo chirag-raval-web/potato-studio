@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
 import { 
   Home, Services, Work, Blog, Career, About ,Header , Route ,useLocation ,Router , Routes,
-  QuoteSection, Footer
+  QuoteSection, Footer , ScrollToTopBtn
 } from './components/import';
 import './components/style/common.css';
+import Contact from './components/Contact';
+ 
 
 function SetTitle() {
   const location = useLocation();
@@ -23,6 +25,7 @@ function App() {
   return (
     <Router>
       <Header />
+      <ScrollToTopBtn />
       <SetTitle />
        
       <QuoteSection />
@@ -34,6 +37,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/career" element={<Career />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact-us" element={<Contact />} />
       </Routes>
       <Footer/>
     </Router>

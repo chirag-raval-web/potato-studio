@@ -59,13 +59,13 @@ export const OfficeAddress = ({ Address }) => {
   );
 };
 
-  const PrivacyPolicy = ({ PrivacyPage }) => {
+  const PrivacyPolicy = () => {
   return (
     <>
-      <a href={PrivacyPage} className="text-decoration-none text-white-50 ">
+      <Link to="/privacy" className="text-decoration-none text-white-50 ">
         Our Privacy Policy{" "}
         <img src="media\smalll-icons\right-arrow.svg" alt="right-arrow" />
-      </a>
+      </Link>
     </>
   );
 };

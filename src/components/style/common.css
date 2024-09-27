@@ -290,7 +290,7 @@ text-align: left;
   }
 
   .quotes {
-      max-height: 400px;
+      height: auto;
   }
 }
 
@@ -420,19 +420,30 @@ text-align: left;
 
 }
 /* --------------------------------footer style end ------------ */
+/* Fade transition classes for the quotes */
 .fade-enter {
   opacity: 0;
-  transform: translateY(100px); /* Start 20px lower */
+  transform: translateY(20px); /* Start slightly lower */
 }
+
 .fade-enter-active {
   opacity: 1;
-  transition: opacity 500ms;
-  transform: translateY(0); /* Move back to normal position */
-  transition: opacity 500ms, transform 500ms;
+  transform: translateY(0); /* Moves back to the normal position */
+  transition: opacity 500ms ease, transform 500ms ease; /* Smooth transition */
 }
+
 .fade-exit {
-  opacity: 0;
+  opacity: 1;
+  transform: translateY(0);
 }
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(20px); /* Moves down again */
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+
+ 
  
 /* ------------------------------section fad tranition style end------------ */
 

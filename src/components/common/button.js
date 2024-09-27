@@ -1,54 +1,50 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Contact = () => {
+const Contact = ({ src = "/contact-us" }) => {
   return (
     <>
       <div className="d-flex mb-sm-4 mb-lg-0 me-xxl-5" role="button">
         <button className="rounded-pill contact" type="button">
-          <a href="#" className="text-decoration-none text-white ">
+          <Link to={src} className="text-decoration-none text-white">
             Contact
-          </a>
+          </Link>
         </button>
       </div>
     </>
   );
 };
 
-export const GetInTouchWhite = ({ btnTxt = "Get in touch", className = "" }) => {
+export const GetInTouchWhite = ({ btnTxt = "Get in touch", className = "", src = "#" }) => {
   return (
     <>
-      <a
-        href="#"
-         className={`btn get-in-touch-btn bg-white    text-black border-white rounded-pill  ${className}`}
+      <Link
+        to={src}
+        className={`btn get-in-touch-btn bg-white text-black border-white rounded-pill ${className}`}
       >
-       <span>
-       {btnTxt}
-        </span>
+        <span>{btnTxt}</span>
         <img
-        className="ms-2 rightArrow"
+          className="ms-2 rightArrow"
           src="../media/smalll-icons/rigthArrow.webp"
           width="24"
           height="24"
           alt="rightArrow"
         />
-      </a>
+      </Link>
     </>
   );
 };
-export const GetInTouchPurple = ({ btnTxt = "Get in touch" }) => {
+
+export const GetInTouchPurple = ({ btnTxt = "Get in touch", src = "../html-files/contact" }) => {
   return (
     <>
       <button className="rounded-pill get-in-touch-btn-2" type="button">
-        <a
-          href="../html-files/contact"
-          className="text-decoration-none text-white"
-        >
+        <Link to={src} className="text-decoration-none text-white">
           {btnTxt}
-        </a>
+        </Link>
       </button>
     </>
   );
 };
 
- 
 export default Contact;

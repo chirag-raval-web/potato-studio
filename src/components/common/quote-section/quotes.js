@@ -5,24 +5,23 @@ import QuoteApi from "./quotesApi"; // Adjust the import path as needed
 import { useLocation } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
-export const QuoteItem = ({ quoteData }) => {
+ export const QuoteItem = ({ quoteData }) => {
   const location = useLocation();
   const [inProp, setInProp] = useState(false);
 
   useEffect(() => {
-    setInProp(true);
-  }, []);
+    setInProp(true); // Triggers the transition
+  }, [quoteData]); // Ensure transition is based on quoteData changes
 
   return (
-    <>
-      {/* <TransitionGroup> */}
+    <TransitionGroup>
       {quoteData.map((elm) => (
-        // <CSSTransition key={elm.id} in={inProp} timeout={500} classNames="fade">
-          <div className="quotes container-fluid" key={elm.id}>
+        <CSSTransition key={elm.id} in={inProp} timeout={500} classNames="fade">
+          <div className="quotes container-fluid">
             <div className="container d-flex">
               <div className="row justify-content-center">
                 <div className="section-1">
-                  {location.pathname === "/" && ( 
+                  {location.pathname === "/" && (
                     <>
                       <img
                         src="../media/smalll-icons/harsha.webp"
@@ -36,7 +35,6 @@ export const QuoteItem = ({ quoteData }) => {
                       />
                     </>
                   )}
-                  
                   <p className="bold-quote">{elm.quote}</p>
                 </div>
 
@@ -46,24 +44,27 @@ export const QuoteItem = ({ quoteData }) => {
 
                 <div className="section-3 mt-5">
                   <div className="row d-flex justify-content-center">
-                    <GetInTouchPurple btnTxt={location.pathname === "/career" ? "Explore Jobs" : "Get in Touch"} />
-                    {location.pathname === "/" && ( 
-                      <>
-                        <GetInTouchWhite className="" />
-                      </>
+                    <GetInTouchPurple
+                      btnTxt={
+                        location.pathname === "/career"
+                          ? "Explore Jobs"
+                          : "Get in Touch"
+                      }
+                      src="/contact-us"
+                    />
+                    {location.pathname === "/" && (
+                      <GetInTouchWhite src={"/work"}  />
                     )}
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        // </CSSTransition>
+        </CSSTransition>
       ))}
-    {/* // </TransitionGroup> */}
-    </>
+    </TransitionGroup>
   );
 };
-
 const QuoteSection = () => {
   const location = useLocation();
   const [quoteData] = useState(QuoteApi);

@@ -1,0 +1,91 @@
+.ValuesContainer {
+    max-width: 1440px;
+    width: 100%;
+    height: auto;
+    padding: 140px 106px 140px 106px;
+    gap: 100px;
+}
+
+.valueItems {
+    width: 100%;
+    height: auto;
+    max-width: 1440px;
+    padding: 0px 106px 0px 106px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.valueItems>div {
+    width: 383px;
+    height: auto;
+    gap: 40px;
+}
+
+.valueIndex {
+    width: 110px;
+    height: 104px;
+}
+
+.valueIndex>h1 {
+
+    font-family: Sora;
+    font-size: 80px;
+    font-weight: 600;
+    line-height: 104px;
+    letter-spacing: -0.04em;
+    text-align: left;
+
+}
+
+.valueInfo {
+    width: auto;
+    height: auto;
+    gap: 16px;
+}
+
+.magicContainer {
+    width: 100%;
+    height: auto;
+    max-width: 1440px;
+    padding: 140px 0px 140px 0px;
+    gap: 100px;
+}
+
+.magicItems {
+    width: 100%;
+    height: auto;
+    gap: 40px;
+    display: flex;
+}
+
+.magicImg {
+    width: 400px;
+    height: 450px;
+}
+
+.clientCon {
+    width: 100%;
+    height: auto;
+    max-width: 1440px;
+    padding: 140px 106px 140px 106px;
+    gap: 100px;
+}
+
+.clientItems {
+    width: 100%;
+    height: auto;
+    max-width: 1440px;
+    gap: 0px;
+    display: flex;
+    justify-content: space-between;
+    
+   
+}
+.clientLogo { 
+ 
+    width: 277px;
+    height: 140px;
+    padding: 56px  44px;
+}
+
+ 

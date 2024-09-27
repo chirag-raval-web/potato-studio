@@ -9,7 +9,7 @@ const Work = () => {
     <main>
       <WorkItems />
       <StartProject />
-      <Faq />
+      
     </main>
     </>
   )

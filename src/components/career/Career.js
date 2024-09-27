@@ -1,12 +1,12 @@
 import React from 'react'
-import { Faq } from '../import'
- 
+import CareerItems from './careerItems'
+import "../style/career.css"
 
 const Career = () => {
   return (
     <>
     <main>
-      <Faq />
+       <CareerItems />
     </main>
     </>
   )

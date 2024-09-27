@@ -1,4 +1,5 @@
 export { default as Home } from './home/Home';
+export { default as ScrollToTopBtn } from './common/scrollToTopBtn';
 export { default as Services } from './services/Services';
 export { default as Work } from './work/Work';
 export { default as Blog } from './blog/Blog';

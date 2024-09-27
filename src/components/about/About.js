@@ -1,14 +1,19 @@
 import React from 'react'
 import { Faq } from '../import'
-import Video from './AboutItems'
- 
+import Video ,{Client, MagicSlider, PostMessage, Values} from './AboutItems'
+import "../style/about.css"
+import StartProject from '../common/StartProject'
 
 const About = () => {
   return (
     <>
     <main>
       <Video />
-      <Faq />
+      <PostMessage />
+      <Values />
+      <MagicSlider />
+      <Client />
+       <StartProject />
     </main>
     </>
   )
