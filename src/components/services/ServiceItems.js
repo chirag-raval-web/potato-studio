@@ -1,62 +1,8 @@
 import React from "react";
 import SectionText from "../common/sectionText";
 import { GetInTouchWhite } from "../common/button";
-
-const services = [
-  {
-    src: "../media/services/ui-ux.svg",
-    alt: "UX/UI Design",
-    title: "UX/UI Design",
-  },
-  {
-    src: "../media/services/mobile.svg",
-    alt: "Mobile App Design",
-    title: "Mobile App Design",
-  },
-  {
-    src: "../media/services/website.svg",
-    alt: "Website Design",
-    title: "Website Design",
-  },
-  {
-    src: "../media/services/dashboard.svg",
-    alt: "Dashboard Design (SaaS)",
-    title: "Dashboard Design",
-    extra: "(SaaS)",
-  },
-  {
-    src: "../media/services/uxResearch.svg",
-    alt: "UX Research",
-    title: "UX Research",
-  },
-  { src: "../media/services/branding.svg", alt: "Branding", title: "Branding" },
-  {
-    src: "../media/services/audit.svg",
-    alt: "Design Audit",
-    title: "Design Audit",
-  },
-  {
-    src: "../media/services/prototype.svg",
-    alt: "Prototyping & Interactions",
-    title: "Prototyping & Interactions",
-  },
-];
-
-const ServiceItem = ({ src, alt, title, extra }) => (
-  <div className="col-lg-3 col-md-4 col-sm-6 text-center mb-4">
-    <div className="serviceItem">
-      <img src={src} alt={alt} className="img-fluid" />
-      <a
-        href="#"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-black text-decoration-none d-block mt-2"
-      >
-        {title} {extra && <span className="text-black-50">{extra}</span>}
-      </a>
-    </div>
-  </div>
-);
+import { servicesData,ApproachData,industryData } from "./serviceApi";
+ 
 
 const ServiceItems = () => (
   <div className="container">
@@ -65,14 +11,20 @@ const ServiceItems = () => (
       <div className="service-inner-section">
         <div className="container">
           <div className="row justify-content-center">
-            {services.map((service, index) => (
-              <ServiceItem
-                key={index}
-                src={service.src}
-                alt={service.alt}
-                title={service.title}
-                extra={service.extra}
-              />
+            {servicesData.map((service, index) => (
+              <div className="col-lg-3 col-md-4 col-sm-6 text-center mb-4"  key={index}>
+              <div className="serviceItem">
+                <img src={service.src} alt={service.alt} className="img-fluid" />
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-black text-decoration-none d-block mt-2"
+                >
+                  {service.title}  
+                </a>
+              </div>
+            </div>
             ))}
             <div className="d-flex justify-content-center  ">
               <GetInTouchWhite />
@@ -150,42 +102,7 @@ export const EngagementModel = () => {
   );
 };
 
-const ApproachData = [
-  {
-    img: "/media/approach/apr1.webp",
-    title: "Research",
-    description: "The methodical study of users to derive user insights.",
-    link: [
-      { text: "Design Audit", url: "#" },
-      { text: "UX Research ", url: "#" },
-      { text: "Competitor Analysis", url: "#" },
-      { text: "UX Workshop", url: "#" },
-    ],
-  },
-  {
-    img: "/media/approach/apr2.webp",
-    title: "Strategy",
-    description: "The process of aligning accurate research insights with the goals.",
-    link: [
-      { text: "Design Thinking", url: "#" },
-      { text: "Product Roadmap", url: "#" },
-      { text: "Growth Strategy", url: "#" },
-      { text: "Service Design", url: "#" },
-    ],
-  },
-  {
-    img: "/media/approach/apr3.webp",
-    title: "Design",
-    description: "Designing seamless experiences, solving user pain points.",
-    link: [
-      { text: "UX/UI Design", url: "#" },
-      { text: "Wire-framing", url: "#" },
-      { text: "Information Architecture", url: "#" },
-      { text: "Visual Communication", url: "#" },
-    ],
-  },
-];
-
+ 
 export const Approach = () => {
   return (
     <>
@@ -215,3 +132,26 @@ export const Approach = () => {
     </>
   );
 };
+
+// ----------------------Approch end------------------------------------
+
+export const Industry = () => {
+  return (
+    <>
+    <div className="container-fluid industry-container">
+      <SectionText title={"Our Diverse Industry Expertise"} />
+      <div className="row  industryItems">
+      {industryData.map((item, index) => (
+        <div key={index} className="col-md-auto col-sm-6 row flex-column">
+          <h5 className="industryTitle col-12">
+          {item.title}
+          </h5>
+           <img src={item.icon} className="industryIcon" alt={item.title} />
+        </div>
+      ))}
+      </div>
+      </div>   
+    </>
+  )
+}
+

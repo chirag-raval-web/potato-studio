@@ -98,7 +98,7 @@ text-align: left;
   padding: 140px 106px;
   margin: 0 auto;
   gap: 100px;
-  opacity: 1;
+ 
 }
 
 .accordion-button:not(.collapsed) {

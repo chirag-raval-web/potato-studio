@@ -40,7 +40,8 @@ const workApi = {
     workPageData: [
         {
             title: "Obvious Wallet",
-            img: "path/to/image/pr1.jpg", // Update with the correct image path
+            img: "/media/work/work1.webp", 
+            bg:"#97A9CF",
             workDone: [
                 "UX/UI Design",
                 "Mobile App Design",
@@ -50,7 +51,8 @@ const workApi = {
         },
         {
             title: "Patel Brothers",
-            img: "path/to/image/patel-brothers.jpg", // Update with the correct image path
+            img: "/media/work/work2.webp", 
+            bg:"#00A94E",
             workDone: [
                 "UX/UI Design",
                 "Website Design",
@@ -59,11 +61,54 @@ const workApi = {
         },
         {
             title: "truHypothesys",
-            img: "path/to/image/truHypothesys.jpg", // Update with the correct image path
+            img: "/media/work/work3.webp", 
+            bg:"#E85D04",
             workDone: [
                 "UX/UI Design",
                 "Mobile App Design",
                 "Branding"
+            ]
+        },
+        {
+            title: "Homesome",
+            img: "/media/work/work4.webp", 
+            bg:"#36342E",
+            workDone: [
+                "UX/UI Design",
+                "website design",
+                "research"
+            ]
+        },
+        {
+            title: "Shine - Preschool & Daycare",
+            img: "/media/work/work5.webp", 
+            bg:"#7A1C78",
+            workDone: [
+                "UX/UI Design",
+                "branding",
+                "website design",
+                "research"
+            ]
+        },
+        {
+            title: "WEKND Store",
+            img: "/media/work/work6.webp", 
+            bg:"#EA5A0B",
+            workDone: [
+                "UX/UI Design",
+                "branding",
+                "mobile design",
+                "research"
+            ]
+        },
+        {
+            title: "The Farm Stories",
+            img: "/media/work/work7.webp", 
+            bg:"#BE7F5D",
+            workDone: [
+                "UX/UI Design",
+                "branding",
+                "research"
             ]
         }
     ]
