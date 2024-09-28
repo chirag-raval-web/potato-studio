@@ -36,12 +36,15 @@ export const RepNavBtn = () => {
   );
 };
 
-export const NavLogo =({width,height})=>{
-  return(
+export const NavLogo = ({ width, height }) => {
+  return (
     <>
-    <img src="media/logo/nav-logo.webp" alt="Logo"
-                        width={width}
-                        height={height} />
+      <img
+        src={`${process.env.PUBLIC_URL}/media/logo/nav-logo.webp`}
+        alt="Logo"
+        width={width}
+        height={height}
+      />
     </>
-  )
-}
+  );
+};

@@ -253,3 +253,11 @@ opacity: 0px;
         gap: 10px; /* Minimal gap */
     }
 }
+/* ------------------------------------------industry style end------------- */
+.questionSection{
+    width: 100%;
+    max-width: 1440px;
+    height: auto;
+    padding: 140px 106px 140px 106px;
+    gap: 120px;
+}

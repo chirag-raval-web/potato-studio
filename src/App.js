@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
 import { 
   Home, Services, Work, Blog, Career, About ,Header , Route ,useLocation ,Router , Routes,
-  QuoteSection, Footer , ScrollToTopBtn
+  QuoteSection, Footer , ScrollToTopBtn ,ServiceDetailedPage
 } from './components/import';
 import './components/style/common.css';
 import Contact from './components/Contact';
+import { StartWithTop } from './components/common/scrollToTopBtn';
+ 
  
 
 function SetTitle() {
@@ -25,6 +27,7 @@ function App() {
   return (
     <Router>
       <Header />
+      {/* <StartWithTop /> */}
       <ScrollToTopBtn />
       <SetTitle />
        
@@ -33,6 +36,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/services/:serviceId" element={<ServiceDetailedPage />} /> 
         <Route path="/work" element={<Work />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/career" element={<Career />} />

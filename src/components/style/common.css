@@ -472,7 +472,7 @@ text-align: left;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.serviceItem a {
+.serviceItem p {
   font-family: 'Sora', sans-serif;
   text-align: center;
   font-size: 20px;

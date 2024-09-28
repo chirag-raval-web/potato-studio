@@ -1,44 +1,59 @@
 import React from "react";
 import SectionText from "../common/sectionText";
 import { GetInTouchWhite } from "../common/button";
-import { servicesData,ApproachData,industryData } from "./serviceApi";
+import { servicesData, ApproachData, industryData } from "./serviceApi";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const ServiceItems = () => {
   const location = useLocation();
-  return(
-  <div className="container">
-    <div className="container-fluid service-section">
-      <SectionText title="Our Services" />
-      <div className="service-inner-section">
-        <div className="container">
-          <div className="row justify-content-center">
-            {servicesData.map((service, index) => (
-              <Link to={`/services${service.to}`} className="col-lg-3 col-md-4 col-sm-6 text-center mb-4  text-black text-decoration-none"  key={index}>
-              <div className="serviceItem ">
-                <img src={service.src} alt={service.alt} className="img-fluid" />
-                <Link
-                  rel="noopener noreferrer"
-                  className="text-black text-decoration-none d-block mt-2 "
-                >
-                  {service.title}  
-                </Link>
+  return (
+    <div className="container">
+      <div className="container-fluid service-section">
+        <SectionText title="Our Services" />
+        <div className="service-inner-section">
+          <div className="container">
+            <div className="row justify-content-center">
+              {servicesData.map((service, index) => {
+                // Create a URL-friendly version of the service title
+                const serviceSlug = service.title
+                  .toLowerCase()
+                  .replace(/[\/]/g, "-") // Replace slashes with hyphens
+                  .replace(/ /g, "-") // Replace spaces with hyphens
+                  .replace(/[^\w-]+/g, ""); // Remove any non-word characters
+
+                return (
+                  <Link
+                    to={`/services/${serviceSlug}`}
+                    className="col-lg-3 col-md-4 col-sm-6 text-center mb-4 text-black text-decoration-none"
+                    key={index}
+                  >
+                    <div className="serviceItem">
+                      <img
+                        src={service.src}
+                        alt={service.alt}
+                        className="img-fluid"
+                      />
+                      <p className="text-black text-decoration-none d-block mt-2">
+                        {service.title}
+                      </p>
+                    </div>
+                  </Link>
+                );
+              })}
+
+              <div className="d-flex justify-content-center">
+                {location.pathname === "/" && (
+                  <GetInTouchWhite src="/services" />
+                )}
               </div>
-            </Link>
-            ))}
-            <div className="d-flex justify-content-center  ">
- 
-            {location.pathname === "/" && <GetInTouchWhite src="/services" />}
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  )
-}
-
+  );
+};
 
 export default ServiceItems;
 
@@ -107,7 +122,6 @@ export const EngagementModel = () => {
   );
 };
 
- 
 export const Approach = () => {
   return (
     <>
@@ -122,10 +136,14 @@ export const Approach = () => {
                   <h5 className="card-title">{item.title}</h5>
                   <p className="card-text">{item.description}</p>
                   <div className="d-flex ApproachLink flex-column">
-                  {item.link.map((link, i) => (
-                    <a key={i} href={link.url} className="text-decoration-none">
-                    {link.text}
-                  </a>
+                    {item.link.map((link, i) => (
+                      <a
+                        key={i}
+                        href={link.url}
+                        className="text-decoration-none"
+                      >
+                        {link.text}
+                      </a>
                     ))}
                   </div>
                 </div>
@@ -143,20 +161,17 @@ export const Approach = () => {
 export const Industry = () => {
   return (
     <>
-    <div className="container-fluid industry-container">
-      <SectionText title={"Our Diverse Industry Expertise"} />
-      <div className="row  industryItems">
-      {industryData.map((item, index) => (
-        <div key={index} className="col-md-auto col-sm-6 row flex-column">
-          <h5 className="industryTitle col-12">
-          {item.title}
-          </h5>
-           <img src={item.icon} className="industryIcon" alt={item.title} />
+      <div className="container-fluid industry-container">
+        <SectionText title={"Our Diverse Industry Expertise"} />
+        <div className="row  industryItems">
+          {industryData.map((item, index) => (
+            <div key={index} className="col-md-auto col-sm-6 row flex-column">
+              <h5 className="industryTitle col-12">{item.title}</h5>
+              <img src={item.icon} className="industryIcon" alt={item.title} />
+            </div>
+          ))}
         </div>
-      ))}
       </div>
-      </div>   
     </>
-  )
-}
-
+  );
+};

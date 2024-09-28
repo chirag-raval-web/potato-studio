@@ -30,10 +30,10 @@ const MenuItem = () => {
 export default MenuItem;
 
 export const FooterLogo = () => {
-  return <img src="../media/logo/footer-logo.svg" alt="footer-logo" />;
+  return  <img src={`${process.env.PUBLIC_URL}/media/logo/footer-logo.svg`} alt="footer-logo" />
 };
 
-  const CopyRight = () => {
+const CopyRight = () => {
   return (
     <p className="copyright text-white">
       ©The Potato Studio 2024. All rights reserved.
@@ -59,18 +59,21 @@ export const OfficeAddress = ({ Address }) => {
   );
 };
 
-  const PrivacyPolicy = () => {
+const PrivacyPolicy = () => {
   return (
     <>
       <Link to="/privacy" className="text-decoration-none text-white-50 ">
         Our Privacy Policy{" "}
-        <img src="media\smalll-icons\right-arrow.svg" alt="right-arrow" />
+        <img
+          src={`${process.env.PUBLIC_URL}/media/smalll-icons/right-arrow.svg`}
+          alt="right-arrow"
+        />
       </Link>
     </>
   );
 };
 
-  const SocialIcons = () => {
+const SocialIcons = () => {
   const Icons = [
     { path: "#", img: "behance.svg" },
     { path: "#", img: "dribbble.svg" },
@@ -87,7 +90,7 @@ export const OfficeAddress = ({ Address }) => {
           className="text-decoration-none text-white"
         >
           <img
-            src={`media/social-icons/${icon.img}`}
+            src={`${process.env.PUBLIC_URL}/media/social-icons/${icon.img}`}
             alt={icon.img}
             style={{ width: "24px", height: "24px" }}
           />
@@ -97,7 +100,7 @@ export const OfficeAddress = ({ Address }) => {
   );
 };
 
-export const PrivacySection = ({className}) => {
+export const PrivacySection = ({ className }) => {
   return (
     <>
       <div className={`privacy-section d-xl-block ${className}`}>

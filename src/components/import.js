@@ -8,6 +8,7 @@ export { default as About } from './about/About';
 export { default as Header } from './common/navbar/Header';
 export { default as Faq } from './common/faq/faq';
 export { default as Footer } from './common/Footer/Footer';
+export { default as ServiceDetailedPage } from './services/ServiceDetailedPage';
 export { default as MenuItem } from './common/Footer/FooterItems';
 export { default as QuoteSection } from './common/quote-section/quotes';
 export { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
+
 const styles = {
     container: 
     {
@@ -24,7 +25,6 @@ const styles = {
 
 
 }
-
 const BlogData = [
     { 
       id: 1,
