@@ -118,17 +118,17 @@
     gap: 100px;
     box-sizing: border-box;
 }
- 
-  .ApproachItems {
+
+.ApproachItems {
     /* max-width: 1440px; */
     width: 100%;
     max-height: 574px;
     max-width: 1440px;
     padding: 0px 106px 0px 106px;
- 
-}  
 
- 
+}
+
+
 .approach-container {
     max-width: 1440px;
     width: 100%;
@@ -137,7 +137,7 @@
     box-sizing: border-box;
 }
 
- 
+
 
 .approach-item {
     /* width: 383px; */
@@ -149,6 +149,7 @@
     opacity: 0px;
 
 }
+
 /* .card-img-top{
     width: 302.67px;
 height: 146px;
@@ -166,7 +167,7 @@ opacity: 0px;
     gap: 24px;
 }
 
-.ApproachLink>a {
+.ApproachLink>p {
     font-family: Inter;
     font-size: 16px;
     font-weight: 500;
@@ -178,21 +179,23 @@ opacity: 0px;
 
 @media screen and (max-width:1440px) {
 
-    .approach-container{
+    .approach-container {
         height: fit-content;
     }
-    
+
 }
+
 /* -------------approach style end----------------------- */
- .industry-container{
+.industry-container {
     width: 100%;
     max-width: 1440px;
     height: auto;
     padding: 140px 106px 140px 106px;
     gap: 100px;
     /* background-color: aqua; */
- }
- .industryItems{
+}
+
+.industryItems {
     width: 100%;
     /* background-color: yellow; */
     height: auto;
@@ -200,64 +203,82 @@ opacity: 0px;
     display: flex;
     justify-content: center;
     gap: 40px;
- }
- .industryItems >div{
-     
+}
+
+.industryItems>div {
+
     /* background-color: #f22076; */
     width: 277px;
     height: 260px;
     padding: 40px;
-    gap:10px;
-    border-radius: 30px ;
+    gap: 10px;
+    border-radius: 30px;
     border: 1px solid #E3E3E3;
     display: flex;
     justify-content: space-between;
- }
- .industryTitle{
+}
+
+.industryTitle {
     font-family: Sora;
     font-size: 26px;
     font-weight: 600;
     line-height: 33.8px;
     letter-spacing: -0.04em;
     text-align: left;
- }
- .industryIcon{
+}
+
+.industryIcon {
     display: flex;
     width: 64px;
     height: 64px;
-    justify-self:flex-end;
+    justify-self: flex-end;
     align-self: end;
- }
- 
- 
+}
+
+
 /* Medium screens (Tablets and smaller laptops) */
 @media (max-width: 1024px) {
     .industry-container {
-        padding: 100px 80px; /* Decrease padding for medium devices */
-        gap: 50px; /* Reduce the gap between items */
+        padding: 100px 80px;
+        /* Decrease padding for medium devices */
+        gap: 50px;
+        /* Reduce the gap between items */
     }
 }
 
 /* Small screens (Mobile phones and smaller tablets) */
 @media (max-width: 768px) {
     .industry-container {
-        padding: 60px 30px; /* Further reduce padding */
-        gap: 20px; /* Reduce gap for smaller screens */
+        padding: 60px 30px;
+        /* Further reduce padding */
+        gap: 20px;
+        /* Reduce gap for smaller screens */
     }
 }
 
 /* Extra small screens (Very small phones) */
 @media (max-width: 480px) {
     .industry-container {
-        padding: 40px 20px; /* Minimal padding for small devices */
-        gap: 10px; /* Minimal gap */
+        padding: 40px 20px;
+        /* Minimal padding for small devices */
+        gap: 10px;
+        /* Minimal gap */
     }
 }
+
 /* ------------------------------------------industry style end------------- */
-.questionSection{
+.questionSection {
     width: 100%;
     max-width: 1440px;
     height: auto;
     padding: 140px 106px 140px 106px;
     gap: 120px;
+}
+
+.NavigateService {
+    width: 100%;
+    max-width: 1440px;
+    height: auto;
+    padding: 100px 106px 140px 106px;
+
 }

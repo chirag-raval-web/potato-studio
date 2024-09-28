@@ -104,7 +104,7 @@ export const Values = () => {
         <div className="row valueItems">
           {ValueData.map((item, index) => {
             return (
-              <div className="col-md-4" key={index}>
+              <div className="col-md-4" key={item.title}>
                 <div className="valueIndex">
                   <h1>
                     {`0${index + 1}`}
@@ -123,6 +123,7 @@ export const Values = () => {
     </>
   );
 };
+
 
 const settings = {
   dots: false, // Hide the dots at the bottom
@@ -243,17 +244,18 @@ export const Client = () => {
     <>
       <div className="container-fluid clientCon">
         <SectionText title={"Our Clients"} />
-        <div className="row clientItems  ">
+        <div className="row clientItems">
           {PartnerLogos.map((partner, index) => {
-            return(
-                <div className="col-auto  clientLogo">
+            return (
+              <div className="col-auto clientLogo" key={partner.alt}>
                 <img src={partner.src} alt={partner.alt} />
-                </div>
-            )
+              </div>
+            );
           })}
         </div>
       </div>
     </>
   );
 };
+
 

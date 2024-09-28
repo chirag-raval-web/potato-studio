@@ -137,13 +137,13 @@ export const Approach = () => {
                   <p className="card-text">{item.description}</p>
                   <div className="d-flex ApproachLink flex-column">
                     {item.link.map((link, i) => (
-                      <a
+                      <p
                         key={i}
-                        href={link.url}
+                        
                         className="text-decoration-none"
                       >
                         {link.text}
-                      </a>
+                      </p>
                     ))}
                   </div>
                 </div>

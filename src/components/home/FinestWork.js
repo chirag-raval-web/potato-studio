@@ -43,7 +43,7 @@ const FinestWork = () => {
               </div>
             ))}
           </div>
-          <GetInTouchWhite btnTxt='See all work' className='d-flex justify-content-center align-self-center' />
+          <GetInTouchWhite btnTxt='See all work' className='d-flex justify-content-center align-self-center' src='/work' />
         </div>
       </div>
     </>

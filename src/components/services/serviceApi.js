@@ -57,10 +57,10 @@ export  const ApproachData = [
       title: "Research",
       description: "The methodical study of users to derive user insights.",
       link: [
-        { text: "Design Audit", url: "#" },
-        { text: "UX Research ", url: "#" },
-        { text: "Competitor Analysis", url: "#" },
-        { text: "UX Workshop", url: "#" },
+        { text: "Design Audit" },
+        { text: "UX Research "},
+        { text: "Competitor Analysis" },
+        { text: "UX Workshop" },
       ],
     },
     {
